@@ -1,0 +1,39 @@
+@import "config";
+
+body {
+  display: grid;
+}
+
+header {
+  display: flex;
+  background-color: $secondary;
+  align-items: center;
+  h1 {
+    font-weight: 400;
+    display: inline;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  nav {
+    flex: 1;
+    text-align: right;
+    padding-right: 1rem;
+    justify-content: center;
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-right: 1em;
+        a {
+          text-decoration: none;
+          border-bottom: 1px solid black;
+          transition: border 0.1s;
+          &:hover {
+            border-bottom: 4px solid black;
+          }
+        }
+      }
+    }
+  }
+}

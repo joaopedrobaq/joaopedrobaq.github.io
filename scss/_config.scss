@@ -1,0 +1,17 @@
+$primary: #303036;
+$secondary: #30bced;
+$light: #fffaff;
+
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Share Tech Mono", monospace;
+}
+
+a {
+  color: inherit;
+}
