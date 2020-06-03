@@ -1,9 +1,12 @@
 $primary: #303036;
 $secondary: #30bced;
 $light: #e5f4e3;
-$mono: "Share Tech Mono", monospace;
-$sans: "Share", sans-serif;
-@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Share:wght@400;700&display=swap");
+$mono: "Fira Code", monospace;
+$sans: "Fira Sans", sans-serif;
+
+$tablet: 1024px;
+$mobile: 768px;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Fira+Sans:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;

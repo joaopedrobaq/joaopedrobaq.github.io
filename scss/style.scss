@@ -46,29 +46,129 @@ body > header {
 }
 
 body > main {
+  padding: 1rem;
   color: $primary;
   margin: 0 auto;
-  display: flex;
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  padding-bottom: 50px;
+
   section {
-    flex-basis: 100%;
     text-align: justify;
-    padding: 1em;
     header {
       margin: 1em 0;
+      text-align: center;
+      font-family: $mono;
     }
     main {
       font-size: 1.2rem;
     }
   }
-  padding-bottom: 75px;
 
-  #contato {
-    main {
-      a {
-        font-size: 3rem;
+  #sobre {
+    grid-area: sobre;
+    ul {
+      margin-top: 1rem;
+      list-style-type: none;
+      li {
+        &:before {
+          content: "-";
+          margin-right: 0.5rem;
+        }
+        font-weight: bold;
       }
     }
+  }
+
+  #works {
+    grid-area: works;
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      section {
+        margin-bottom: 2rem;
+        a {
+          img {
+            max-width: 100%;
+            border: 2px solid $primary;
+          }
+          &:hover {
+            img {
+              border-color: $secondary;
+            }
+            color: $secondary;
+            transition: 0.1s;
+          }
+          text-decoration: none;
+          transition: 0.1s;
+        }
+      }
+    }
+  }
+
+  #contato {
+    grid-area: contato;
+    main {
+      ul {
+        margin-top: 1rem;
+        list-style-type: none;
+        a {
+          display: block;
+          transition: 0.1s;
+          text-decoration: none;
+          &:hover {
+            filter: brightness(110%);
+          }
+          li {
+            i {
+              font-size: 2rem;
+              vertical-align: middle;
+              margin-right: 0.5rem;
+            }
+            padding: 1rem;
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            &#twitter {
+              background-color: #1da1f2;
+              color: $light;
+            }
+
+            &#github {
+              background-color: #4078c0;
+              color: $light;
+            }
+
+            &#linkedin {
+              background-color: #0077b5;
+              color: $light;
+            }
+
+            &#email {
+              background-color: #b23121;
+              color: $light;
+            }
+          }
+        }
+      }
+    }
+  }
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "sobre works contato";
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "sobre works works"
+      "contato contato contato";
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "sobre"
+      "works"
+      "contato";
   }
 }
 
@@ -76,7 +176,7 @@ body > footer {
   align-items: center;
   display: flex;
   background-color: $primary;
-  height: 75px;
+  height: 50px;
   padding-left: 1rem;
   color: $light;
   text-align: center;
@@ -85,4 +185,8 @@ body > footer {
   width: 100%;
   clear: both;
   position: absolute;
+  section {
+    text-align: center;
+    width: 100%;
+  }
 }
