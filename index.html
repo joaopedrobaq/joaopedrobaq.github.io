@@ -45,15 +45,15 @@
       </header>
       <main>
         <section>
-          <a href="#">
+          <a onclick="openWork('bolao')">
             <img src="bolao.png" alt="Bolão NFL">
             <h3>Bolão NFL</h3>
           </a>
         </section>
         <section>
-          <a href="#">
-            <img src="baqdev.png" alt="BaqDev">
-            <h3>BaqDev</h3>
+          <a onclick="openWork('baqdev')">
+            <img src=" gincana.png" alt="BaqDev">
+            <h3>Gincana</h3>
           </a>
         </section>
       </main>
@@ -85,6 +85,21 @@
   <footer>
     <section>BaqDev&copy; 2020</section>
   </footer>
+
+  <div id="popbolao" class="popup hide">
+    <img src="bolao.png" alt="Bolão NFL">
+    <h2>Bolão NFL</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil officia voluptas nemo et vel assumenda
+      consectetur aspernatur necessitatibus nam quas doloribus voluptatem, ullam id exercitationem deleniti eum at,
+      repudiandae accusantium, nesciunt culpa recusandae fugiat eveniet? Nihil tempore perspiciatis necessitatibus error
+      ipsum perferendis iure fuga non.</p>
+  </div>
+  <div id="popgincana" class="popup hide"></div>
+  <div id="overlay" class="hide" onclick="fecharPopUp()"></div>
+
+
+  <script src="scripts.js"></script>
+
 </body>
 
 </html>
